@@ -1,15 +1,10 @@
-# Hariharan Portfolio Site
+# Hariharan T Personal Portfolio
 
-This folder is ready for GitHub Pages.
+Upload these files directly to the repository root:
 
-## Files
-- `index.html` — main portfolio page
-- `resume.pdf` — downloadable resume
-- `assets/profile.jpg` — portrait image
+- index.html
+- profile.jpg
+- resume.pdf
+- .nojekyll
 
-## Publish on GitHub Pages
-1. Create a new GitHub repository.
-2. Upload all files from this folder to the repository root.
-3. In repository settings, enable GitHub Pages from the main branch.
-4. The site will be available at the GitHub Pages URL.
-
+The portfolio uses root-relative paths, so no assets folder is needed.
