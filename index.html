@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hariharan T — Data Integration Specialist & ETL Developer</title>
+<meta name="description" content="Portfolio of Hariharan T — Data Integration Specialist & ETL Developer.">
+<style>
+:root{
+  --bg:#f6f6f1;--paper:#fff;--ink:#111;--muted:#686862;--line:#deded7;
+  --soft:#ecece5;--lime:#c9ff3d;--dark:#151515;--max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit}
+.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+.nav{height:72px;display:flex;align-items:center;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(246,246,241,.94);backdrop-filter:blur(14px);z-index:30}
+.nav-inner{display:flex;width:100%;align-items:center;justify-content:space-between}
+.logo{font-weight:900;letter-spacing:-.05em;font-size:18px;white-space:nowrap}
+.logo span{display:inline-grid;place-items:center;width:34px;height:34px;background:#111;color:#fff;border-radius:50%;font-size:11px;margin-right:9px}
+.links{display:flex;gap:26px;font-size:12px;color:#333}
+.links a{text-decoration:none}
+.links a:hover{opacity:.55}
+.nav-right{font-size:11px;color:var(--muted)}
+.status{padding:9px 12px;background:#ecece7;border-radius:10px}
+.dot{width:6px;height:6px;border-radius:50%;background:#111;display:inline-block;margin-right:6px}
+
+.hero{display:grid;grid-template-columns:1.04fr .96fr;min-height:720px;border-bottom:1px solid var(--line)}
+.hero-copy{padding:82px 45px 72px 0;display:flex;flex-direction:column;justify-content:center}
+.eyebrow,.kicker{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted)}
+.eyebrow{margin-bottom:23px}
+.hero h1{font-size:clamp(4.2rem,7.5vw,7.1rem);line-height:.86;letter-spacing:-.075em;margin:0 0 30px;max-width:7ch;font-weight:650}
+.role{font-size:clamp(1.3rem,2.2vw,1.9rem);line-height:1.2;letter-spacing:-.04em;max-width:560px}
+.hero-desc{color:var(--muted);font-size:14px;line-height:1.7;max-width:570px;margin-top:16px}
+.actions{display:flex;gap:9px;margin-top:26px;flex-wrap:wrap}
+.btn{display:inline-flex;text-decoration:none;padding:12px 17px;border-radius:9px;font-size:12px;font-weight:700;transition:.2s}
+.btn.dark{background:#111;color:#fff}
+.btn.light{border:1px solid var(--line);background:#fff}
+.btn:hover{transform:translateY(-2px)}
+
+.hero-photo{position:relative;display:flex;align-items:flex-end;justify-content:flex-end;padding:26px 0 0 20px;overflow:hidden}
+.hero-photo:before{
+  content:"";position:absolute;right:2%;bottom:2%;width:86%;height:82%;
+  background:radial-gradient(circle at 52% 28%, rgba(255,255,255,.96) 0, rgba(237,237,230,.92) 36%, rgba(237,237,230,.55) 58%, rgba(237,237,230,0) 74%);
+  border-radius:50% 50% 0 0 / 42% 42% 0 0;
+  filter:blur(1px);
+}
+.hero-photo img{
+  position:relative;width:min(100%,500px);height:680px;object-fit:cover;
+  object-position:center 10%;z-index:1;filter:saturate(.96);
+  border-radius:260px 260px 26px 26px;
+  box-shadow:0 30px 70px rgba(0,0,0,.08);
+}
+.photo-note{position:absolute;z-index:3;left:34px;bottom:34px;background:#111;color:#fff;padding:13px 15px;border-radius:8px;font-size:11px}
+.side-social{position:absolute;right:0;top:65px;display:flex;flex-direction:column;gap:8px;z-index:4}
+.social{width:37px;height:37px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;background:#fff;font-size:11px;text-decoration:none}
+.social:hover{background:#111;color:#fff}
+
+.section{padding:100px 0;border-bottom:1px solid var(--line)}
+.section-head{display:grid;grid-template-columns:.72fr 1.28fr;gap:60px;margin-bottom:42px;align-items:end}
+h2{font-size:clamp(2.6rem,5vw,4.7rem);line-height:.94;letter-spacing:-.065em;margin:0;font-weight:600}
+h3{margin:0;font-size:25px;letter-spacing:-.035em}
+.summary{font-size:20px;line-height:1.5;letter-spacing:-.025em;max-width:770px}
+
+.professional{background:#eeeee8}
+.role-card{display:grid;grid-template-columns:250px 1fr;gap:55px;background:#f7f7f3;border:1px solid #d8d8d1;padding:38px}
+.role-meta{font-size:12px;color:var(--muted);line-height:1.65}
+.role-meta strong{display:block;color:#111;font-size:15px;margin-bottom:5px}
+.role-main h3{font-size:31px;margin-bottom:12px}
+.role-main .lead{font-size:16px;line-height:1.65;color:#45453f;max-width:760px;margin:0 0 22px}
+.bullets{margin:0;padding-left:18px;color:#363632;font-size:14px;line-height:1.75}
+.bullets li{margin-bottom:7px}
+.pill-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}
+.tag{font-size:11px;padding:7px 9px;border:1px solid #d4d4cd;border-radius:5px;background:#fff}
+
+.project-experience{background:#fff}
+.project-grid{display:grid;gap:2px;background:#d8d8d1;border:1px solid #d8d8d1}
+.project{background:#fafaf7;padding:34px;display:grid;grid-template-columns:230px 1fr;gap:44px}
+.project-meta{font-size:11px;color:var(--muted);line-height:1.65}
+.project-meta strong{display:block;color:#111;font-size:14px;margin-bottom:6px}
+.project-title{font-size:29px;margin:0 0 15px;letter-spacing:-.04em}
+.project-desc{font-size:14px;line-height:1.75;color:#4b4b46;margin:0 0 15px}
+.project .bullets{margin-top:8px}
+
+.innovation{background:#151515;color:#fff}
+.innovation .kicker,.innovation .muted{color:#aaa}
+.innovation h2{color:#fff}
+.case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:#333}
+.case{background:#1b1b1b;padding:34px;min-height:270px;display:flex;flex-direction:column;justify-content:space-between}
+.case:nth-child(1){grid-column:span 2;min-height:310px;background:#202020}
+.case-num{font-size:10px;color:#aaa;letter-spacing:.15em}
+.case h3{font-size:32px;margin:20px 0 12px}
+.case p{font-size:14px;line-height:1.72;color:#bdbdb7;max-width:700px}
+.award{display:inline-block;background:var(--lime);color:#111;padding:6px 9px;font-size:9px;font-weight:800;border-radius:4px;margin-left:8px}
+
+.academic-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:2px;background:var(--line);align-items:stretch}
+.academic-card{background:#fff;padding:40px;min-height:220px;display:flex;flex-direction:column;justify-content:flex-start}
+.academic-card:first-child{align-items:flex-start}
+.academic-card:last-child{justify-content:center}
+.academic-card p{font-size:15px;line-height:1.75;color:#555;margin:15px 0 0;max-width:620px}
+
+.education{display:grid;grid-template-columns:1.2fr .8fr;gap:2px;background:var(--line)}
+.edu-main,.cert{background:#fff;padding:40px}
+.edu-main .degree{font-size:30px;letter-spacing:-.04em;margin:14px 0}
+.edu-main p,.cert p,.cert li{font-size:14px;line-height:1.7;color:#5d5d57}
+.cert ul{padding-left:18px}
+
+.skill-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}
+.skill-intro{font-size:19px;line-height:1.5;color:#555}
+.skills{display:flex;flex-wrap:wrap;gap:9px}
+.skill{border:1px solid #d5d5ce;background:#fff;border-radius:8px;padding:12px 14px;font-size:13px}
+
+.contact{background:#151515;color:#fff;padding:100px 0}
+.contact-grid{display:flex;justify-content:space-between;align-items:end;gap:40px}
+.contact h2{max-width:650px}
+.contact p{color:#aaa;line-height:1.7;max-width:560px}
+.contact a{color:#fff}
+.footer{padding:25px 0;color:#777;font-size:12px;display:flex;justify-content:space-between}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.show{opacity:1;transform:none}
+
+@media(max-width:850px){
+  .links{display:none}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-copy{padding:70px 0 40px}
+  .hero-photo{padding-left:0}
+  .hero-photo:before{left:0}
+  .side-social{right:8px}
+  .section-head,.skill-wrap,.education,.academic-grid{grid-template-columns:1fr}
+  .role-card,.project{grid-template-columns:1fr;gap:22px}
+  .case-grid{grid-template-columns:1fr}
+  .case:nth-child(1){grid-column:auto}
+  .contact-grid{display:block}
+  .hero h1{font-size:clamp(4rem,17vw,6rem)}
+}
+@media(max-width:520px){
+  .wrap{width:min(var(--max),calc(100% - 28px))}
+  .nav-right{display:none}
+  .hero-photo img{height:500px}
+  .section{padding:72px 0}
+  .role-card,.project,.case,.academic-card,.edu-main,.cert{padding:25px}
+  .summary{font-size:18px}
+}
+
+.career-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:1px solid var(--line)}
+.career-step{background:#fff;padding:30px 28px;min-height:170px}
+.career-step .num{font-size:10px;color:var(--muted);letter-spacing:.15em}
+.career-step h3{margin:22px 0 7px;font-size:22px}
+.career-step p{margin:0;color:#666;font-size:13px;line-height:1.6}
+.proof-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--line);border:1px solid var(--line)}
+.proof-card{background:#fff;padding:32px;min-height:245px;display:flex;flex-direction:column;justify-content:space-between}
+.proof-card.featured{grid-column:span 2;background:#fff}
+.proof-card .mini{font-size:10px;letter-spacing:.15em;color:var(--muted)}
+.proof-card h3{margin:20px 0 10px;font-size:28px}
+.proof-card p{font-size:14px;line-height:1.72;color:#555;margin:0}
+.dna{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line)}
+.dna-card{background:#fff;padding:34px}
+.dna-card .big{font-size:45px;letter-spacing:-.06em;font-weight:600}
+.dna-card h3{margin:12px 0 8px}
+.dna-card p{font-size:14px;line-height:1.7;color:#555;margin:0}
+.architecture{background:#151515;color:#fff;padding:36px;border-radius:4px;overflow:auto}
+.arch-row{display:flex;align-items:center;gap:10px;min-width:780px}
+.arch-node{padding:18px 20px;border:1px solid #444;background:#202020;border-radius:9px;min-width:145px}
+.arch-node strong{display:block;font-size:13px;margin-bottom:6px}
+.arch-node span{font-size:10px;color:#aaa;line-height:1.5}
+.arch-arrow{color:var(--lime);font-size:22px}
+.achievement-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line);border:1px solid var(--line)}
+.achievement{background:#fff;padding:30px}
+.achievement .year{font-size:11px;color:var(--muted);letter-spacing:.12em}
+.achievement h3{margin:15px 0 8px;font-size:22px}
+.achievement p{margin:0;color:#666;font-size:13px;line-height:1.65}
+.learn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:1px solid var(--line)}
+.learn-card{background:#fff;padding:30px}
+.learn-card .arrow{font-size:25px;margin:14px 0;color:#888}
+.learn-card h3{font-size:22px}
+.learn-card p{font-size:13px;line-height:1.65;color:#666}
+.workflow{display:grid;grid-template-columns:repeat(6,1fr);gap:2px;background:var(--line);border:1px solid var(--line)}
+.workflow-step{background:#fff;padding:25px 20px;min-height:175px}
+.workflow-step .n{font-size:10px;color:var(--muted)}
+.workflow-step h3{font-size:19px;margin:20px 0 8px}
+.workflow-step p{font-size:12px;line-height:1.6;color:#666;margin:0}
+.explore{background:#eeeee8}
+.explore-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.explore-tag{background:#fff;border:1px solid #d5d5ce;padding:12px 15px;border-radius:7px;font-size:13px}
+.featured-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line);border:1px solid var(--line)}
+.featured-item{background:#fff;padding:27px}
+.featured-item .kicker{font-size:9px}
+.featured-item h3{font-size:21px;margin:14px 0 8px}
+.featured-item p{font-size:12px;color:#666;line-height:1.6;margin:0}
+@media(max-width:850px){
+ .career-strip,.proof-grid,.dna,.achievement-grid,.learn-grid,.workflow,.featured-strip{grid-template-columns:1fr}
+ .proof-card.featured{grid-column:auto}
+ .workflow-step{min-height:auto}
+}
+
+
+.current-line{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;font-size:11px;color:var(--muted)}
+.current-chip{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 11px}
+.current-chip b{color:#111}
+.profile-extra{margin-top:28px;display:grid;grid-template-columns:1.05fr .95fr;gap:2px;background:var(--line);border:1px solid var(--line)}
+.profile-extra-card{background:#fff;padding:28px}
+.profile-extra-card h3{font-size:22px;margin:0 0 10px}
+.profile-extra-card p{margin:0;color:#555;line-height:1.75;font-size:14px}
+.problem-list{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--line);margin-top:16px}
+.problem{background:#fafaf7;padding:18px 20px;font-size:13px;line-height:1.65;color:#444}
+.toolkit{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line);border:1px solid var(--line);margin-bottom:28px}
+.toolkit-card{background:#fff;padding:24px;min-height:175px}
+.toolkit-card h3{margin:10px 0 8px;font-size:18px}
+.toolkit-card p{margin:0;color:#666;font-size:13px;line-height:1.7}
+.contact-lead{font-size:18px;line-height:1.6;max-width:560px;color:#ddd}
+@media(max-width:850px){
+  .profile-extra,.toolkit,.problem-list{grid-template-columns:1fr}
+}
+
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="logo"><span>HT</span>HARIHARAN T</div>
+    <nav class="links">
+      <a href="#profile">Profile</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#innovation">Innovation</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+    </nav>
+    <div class="nav-right"><span class="status"><span class="dot"></span>Data Integration Specialist</span></div>
+  </div>
+</header>
+
+<main>
+<section class="wrap hero reveal">
+  <div class="hero-copy">
+    <div class="eyebrow">Data Integration · ETL · Migration</div>
+    <h1>Hello, I'm Hariharan!</h1>
+    <div class="role">Data Integration Specialist &amp; ETL Developer</div>
+    <div class="hero-desc">Results-driven Data Integration Specialist with a strong engineering background and expertise across ETL/ELT development, data warehousing, testing and large-scale legacy migrations.</div>
+    <div class="current-line">
+      <span class="current-chip"><b>●</b> Currently at Cognizant</span>
+      <span class="current-chip">Kochi, India</span>
+      <span class="current-chip">3+ Years of Experience</span>
+    </div>
+    <div class="actions">
+      <a class="btn dark" href="mailto:thangarajhariharan75@gmail.com">Contact Me</a>
+      <a class="btn light" href="#experience">Explore my work</a>
+      <a class="btn light" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <div class="side-social">
+      <a class="social" href="https://www.linkedin.com/in/hariharan-t-1896a4182/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+      <a class="social" href="tel:+919566853015" aria-label="Call Hariharan">☎</a>
+      <a class="social" href="mailto:thangarajhariharan75@gmail.com" aria-label="Email Hariharan">@</a>
+    </div>
+    <img src="assets/profile.jpg" alt="Hariharan T professional portrait">
+    <div class="photo-note">Kochi · 3 Years of experience</div>
+  </div>
+</section>
+
+<section id="profile" class="section wrap reveal">
+  <div class="section-head">
+    <div class="kicker">01 / Profile Summary</div>
+    <div class="summary">Results-driven Data Integration Specialist with a strong engineering background and a proven track record of rapid career progression. Expertise spans end-to-end ETL/ELT pipeline development, full-lifecycle data warehousing, and large-scale legacy migrations. Proficient in Python and SQL, with extensive hands-on experience utilizing enterprise tools like Informatica PowerCenter, IICS, and Pentaho.</div>
+  </div>
+  <div class="profile-extra">
+    <div class="profile-extra-card">
+      <div class="kicker">About Me</div>
+      <h3>I work at the intersection of data, systems and modernization.</h3>
+      <p>My day-to-day work is about turning complex business requirements into reliable data pipelines, validating what moves through them, and modernizing the systems behind them.</p>
+    </div>
+    <div class="profile-extra-card">
+      <div class="kicker">What I Enjoy Solving</div>
+      <div class="problem-list">
+        <div class="problem">Legacy systems that need a safe way forward.</div>
+        <div class="problem">Data pipelines that need to become reliable.</div>
+        <div class="problem">Business rules that need to become automation.</div>
+        <div class="problem">Manual validation that should become repeatable.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIRST: Professional Experience from the resume -->
+<section id="experience" class="section professional reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">02 / Professional Experience</div>
+      <div>
+        <h2>Cognizant</h2>
+        <p style="color:#666;margin:14px 0 0;font-size:14px">Associate · Feb 2023 — Present<br>Promoted: Programmer Analyst Trainee → Programmer Analyst → Associate</p>
+      </div>
+    </div>
+
+    <div class="role-card">
+      <div class="role-meta">
+        <strong>Associate</strong>
+        Cognizant<br>
+        Feb 2023 — Present<br><br>
+        3 Years of experience<br>
+        Kochi
+      </div>
+      <div class="role-main">
+        <div class="kicker">Role Overview</div>
+        <h3>Data Integration &amp; ETL Development</h3>
+        <p class="lead">End-to-end development, testing and production delivery of enterprise data integration solutions, with hands-on ownership across ETL development, migration, data quality, performance tuning and deployment.</p>
+        <ul class="bullets">
+          <li>Analyzed complex business requirements to design, develop and deploy end-to-end ETL solutions.</li>
+          <li>Built scalable data integration pipelines and robust architectures supporting enterprise reporting, business intelligence and analytics initiatives.</li>
+          <li>Implemented CI/CD deployment pipelines for ETL artifacts using Azure DevOps and Git, streamlining release cycles and production deployments.</li>
+          <li>Partnered with business analysts and technical stakeholders to translate complex business rules into robust, automated ETL workflows.</li>
+          <li>Managed the combined coding, testing and final deployment lifecycle of ETL enhancements into production.</li>
+        </ul>
+        <div class="pill-row">
+          <span class="tag">ETL Development</span><span class="tag">Data Integration</span><span class="tag">Data Migration</span>
+          <span class="tag">ETL Testing</span><span class="tag">Azure DevOps</span><span class="tag">Git</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="section wrap reveal">
+  <div class="section-head">
+    <div class="kicker">02A / Career Progression</div>
+    <div>
+      <h2>Growth you can see.</h2>
+      <p style="color:#666;font-size:14px;line-height:1.7;max-width:620px">A progression from trainee to associate, built through hands-on ownership of enterprise data integration work.</p>
+    </div>
+  </div>
+  <div class="career-strip">
+    <div class="career-step"><div class="num">01 / START</div><h3>Programmer Analyst Trainee</h3><p>Started the Cognizant journey with a foundation in enterprise data and ETL engineering.</p></div>
+    <div class="career-step"><div class="num">02 / PROGRESSION</div><h3>Programmer Analyst</h3><p>Expanded ownership across ETL development, testing, migration and production delivery.</p></div>
+    <div class="career-step"><div class="num">03 / CURRENT</div><h3>Associate</h3><p>Current role with end-to-end responsibility across data integration solutions and delivery.</p></div>
+  </div>
+</section>
+
+<!-- SECOND: Professional Project Experience -->
+<section id="projects" class="section project-experience reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">03 / Professional Project Experience</div>
+      <div><h2>The work behind the role.</h2></div>
+    </div>
+
+    <div class="project-grid">
+      <article class="project">
+        <div class="project-meta">
+          <strong>PROJECT 01</strong>
+          CMT Project<br><br>
+          ETL Developer / Migration Specialist
+        </div>
+        <div>
+          <div class="kicker">Legacy ETL Migration &amp; Development</div>
+          <h3 class="project-title">Modernizing legacy data pipelines</h3>
+          <ul class="bullets">
+            <li>Spearheaded the large-scale data migration of legacy ETL pipelines from Pentaho to Oracle Data Integrator (ODI), ensuring exact data reconciliation and minimal system downtime.</li>
+            <li>Designed, developed and deployed end-to-end ETL solutions using Pentaho Data Integration (PDI), translating complex business requirements into automated workflows.</li>
+            <li>Built scalable data integration pipelines and robust architectures to support enterprise-level reporting, business intelligence and analytics initiatives.</li>
+            <li>Implemented CI/CD deployment pipelines for ETL artifacts using Azure DevOps and Git.</li>
+          </ul>
+          <div class="pill-row"><span class="tag">Pentaho PDI</span><span class="tag">ODI</span><span class="tag">Azure DevOps</span><span class="tag">Git</span></div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-meta">
+          <strong>PROJECT 02</strong>
+          Enterprise Data Store<br><br>
+          Full-Stack ETL Developer &amp; QA Engineer
+        </div>
+        <div>
+          <div class="kicker">Enterprise Data Store (EDS) Project</div>
+          <h3 class="project-title">Development, testing &amp; data quality</h3>
+          <ul class="bullets">
+            <li>Designed and developed high-performance ETL enhancements using Informatica PowerCenter and IICS (IDMC / Cloud Data Integration).</li>
+            <li>Developed complex transformations and successfully implemented Slowly Changing Dimension (SCD) Type 1 and Type 2 methodologies for core dimensional tables.</li>
+            <li>Owned the data quality lifecycle end-to-end, specializing in Source-to-Target validation, Unit Testing, SIT, Regression and UAT.</li>
+            <li>Optimized complex SQL queries and Informatica workflows on Oracle and PostgreSQL to improve processing performance and reduce data loading windows.</li>
+          </ul>
+          <div class="pill-row"><span class="tag">PowerCenter</span><span class="tag">IICS / IDMC</span><span class="tag">SCD Type 1/2</span><span class="tag">Oracle</span><span class="tag">PostgreSQL</span></div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-meta">
+          <strong>PROJECT 03</strong>
+          Data Warehouse<br><br>
+          ETL Development
+        </div>
+        <div>
+          <div class="kicker">HR Data Warehouse &amp; Analytics System</div>
+          <h3 class="project-title">Unified workforce analytics</h3>
+          <ul class="bullets">
+            <li>Designed and maintained a scalable HR Data Warehouse integrating employee, payroll and attendance data for unified reporting.</li>
+            <li>Developed ETL jobs and transformations using Pentaho Data Integration (PDI).</li>
+            <li>Implemented data cleansing and validation processes to ensure high data integrity for workforce analytics.</li>
+            <li>Built dimension and fact table loading processes and automated daily and periodic data loads.</li>
+            <li>Performed source-to-target validation and optimized ETL jobs for performance and reliability.</li>
+          </ul>
+          <div class="pill-row"><span class="tag">Pentaho PDI</span><span class="tag">Data Warehouse</span><span class="tag">Data Cleansing</span><span class="tag">Validation</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+</section>
+
+<section class="section wrap reveal">
+  <div class="section-head">
+    <div class="kicker">03A / Engineering DNA</div>
+    <div><h2>I don't just move data.<br>I make data systems reliable.</h2></div>
+  </div>
+  <div class="dna">
+    <div class="dna-card"><div class="big">01</div><h3>Build</h3><p>Design and develop end-to-end ETL/ELT pipelines from complex business requirements.</p></div>
+    <div class="dna-card"><div class="big">02</div><h3>Validate</h3><p>Source-to-target reconciliation, unit testing, SIT, regression and UAT to protect data quality.</p></div>
+    <div class="dna-card"><div class="big">03</div><h3>Optimize</h3><p>Tune SQL queries and ETL workflows for performance, reliability and efficient data loading.</p></div>
+    <div class="dna-card"><div class="big">04</div><h3>Modernize</h3><p>Move legacy integration workloads toward modern platforms and safer, repeatable delivery.</p></div>
+  </div>
+</section>
+
+<section class="section innovation reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">03B / Data Integration Architecture</div>
+      <div><h2>How the work moves.</h2></div>
+    </div>
+    <div class="architecture">
+      <div class="arch-row">
+        <div class="arch-node"><strong>Source Data</strong><span>Oracle · PostgreSQL · Legacy systems</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node"><strong>ETL / ELT</strong><span>PowerCenter · IICS / IDMC · Pentaho</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node"><strong>Validation</strong><span>ST→T · SIT · UAT · Regression</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node"><strong>Data Store</strong><span>Dimensional models · RDBMS · Warehouses</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node"><strong>Analytics</strong><span>Reporting · BI · Business insights</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap reveal">
+  <div class="section-head">
+    <div class="kicker">03C / Proof of Work</div>
+    <div><h2>What I've actually built.</h2></div>
+  </div>
+  <div class="proof-grid">
+    <article class="proof-card featured"><div class="mini">01 / PROFESSIONAL</div><div><h3>Legacy ETL Migration</h3><p><strong>Pentaho → ODI</strong> · Large-scale legacy pipeline migration with data reconciliation, scalable integration architecture and CI/CD deployment.</p></div></article>
+    <article class="proof-card"><div class="mini">02 / PROFESSIONAL</div><div><h3>Enterprise Data Store</h3><p><strong>PowerCenter + IICS</strong> · SCD Type 1/2, source-to-target validation, SIT, regression, UAT and SQL/workflow optimization.</p></div></article>
+    <article class="proof-card"><div class="mini">03 / PROFESSIONAL</div><div><h3>HR Data Warehouse</h3><p><strong>Pentaho PDI</strong> · Integrated employee, payroll and attendance data with dimension/fact loading and automated data validation.</p></div></article>
+  </div>
+</section>
+
+<!-- CONTINUATION: Hackathons -->
+<section id="innovation" class="section innovation reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">04 / Innovation &amp; Hackathon Builds</div>
+      <div><h2>Ideas turned into working systems.</h2></div>
+    </div>
+    <div class="case-grid">
+      <article class="case">
+        <div class="case-num">01 / CLAIMBRIDGE <span class="award">RUNNER-UP AWARD WINNER</span></div>
+        <div><h3>Real-time claims adjudication</h3><p>Modernized legacy COBOL/DB2 batch claims processing into a real-time adjudication engine using a Spring Boot application. The system performs real-time duplicate detection, eligibility checking and pricing, providing immediate feedback instead of a 24-hour batch cycle.</p></div>
+      </article>
+      <article class="case">
+        <div class="case-num">02 / STRATA</div>
+        <div><h3>Legacy ETL knowledge layer</h3><p>An on-premise ETL knowledge layer designed to help teams understand and safely modify decade-old data pipelines. Features include plain-English code explanations grounded in the source, automated impact analysis to trace changes and pre-prod safety checks to prevent breaking changes.</p></div>
+      </article>
+      <article class="case">
+        <div class="case-num">03 / SCHEMACODEX</div>
+        <div><h3>Migration accelerator</h3><p>An accelerator platform to automate the migration of legacy data pipelines from PowerCenter and Pentaho to modern cloud engines like Databricks, IICS and Snowflake. Features include single-click compilation, an AI Co-Pilot for interactive refactoring and target-aware performance auto-tuning.</p></div>
+      </article>
+      <article class="case">
+        <div class="case-num">04 / TRUEBENCH</div>
+        <div><h3>AI-powered talent platform</h3><p>An AI-powered talent platform to solve enterprise bench inefficiency by verifying employee skills based on ground truth from Jira/Git history, not stale self-reports. It automates resource matching, enables blind screening to reduce bias and reclaims shadow-bench capacity.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="section wrap reveal">
+  <div class="section-head">
+    <div class="kicker">04A / Awards &amp; Recognition</div>
+    <div><h2>Results beyond the stack.</h2></div>
+  </div>
+  <div class="achievement-grid">
+    <div class="achievement"><div class="year">2022</div><h3>Overall Best Outgoing Student</h3><p>Recognized at Saranathan College of Engineering for overall performance across academics, sports and extracurricular involvement.</p></div>
+    <div class="achievement"><div class="year">2021</div><h3>Project Expo'21 — 2nd Prize</h3><p>Recognition for project work during engineering studies.</p></div>
+    <div class="achievement"><div class="year">2020</div><h3>Anna University Basketball Zonals — Runner-up</h3><p>Competitive university-level sporting achievement.</p></div>
+    <div class="achievement"><div class="year">2019</div><h3>Anna University Basketball Zonals — Runner-up</h3><p>Another university-level team achievement, reflecting consistency and teamwork.</p></div>
+  </div>
+</section>
+
+<section class="section wrap reveal">
+  <div class="section-head">
+    <div class="kicker">04B / Beyond the Stack</div>
+    <div><h2>Engineering isn't the only place I compete.</h2></div>
+  </div>
+  <div class="achievement-grid">
+    <div class="achievement"><div class="year">SPORT</div><h3>Basketball</h3><p>Anna University Zonal-level competition and runner-up finishes.</p></div>
+    <div class="achievement"><div class="year">TEAM</div><h3>Cricket</h3><p>Corporate cricket involvement that adds another dimension to teamwork, competition and leadership.</p></div>
+  </div>
+</section>
+
+<section class="section wrap reveal">
+  <div class="section-head">
+    <div class="kicker">04C / Featured Work</div>
+    <div><h2>The projects I'd show first.</h2></div>
+  </div>
+  <div class="featured-strip">
+    <div class="featured-item"><div class="kicker">Professional</div><h3>Legacy ETL Migration</h3><p>Pentaho → ODI modernization.</p></div>
+    <div class="featured-item"><div class="kicker">Professional</div><h3>Enterprise Data Store</h3><p>ETL development + quality engineering.</p></div>
+    <div class="featured-item"><div class="kicker">Innovation</div><h3>ClaimBridge</h3><p>Real-time legacy modernization.</p></div>
+    <div class="featured-item"><div class="kicker">Innovation</div><h3>SchemaCodex</h3><p>Legacy ETL migration accelerator.</p></div>
+  </div>
+</section>
+
+<section class="section wrap reveal">
+  <div class="section-head">
+    <div class="kicker">04D / How I Approach a Data Problem</div>
+    <div><h2>Learn → design → build → prove → ship.</h2></div>
+  </div>
+  <div class="workflow">
+    <div class="workflow-step"><div class="n">01</div><h3>Understand</h3><p>Business requirements and source-system context.</p></div>
+    <div class="workflow-step"><div class="n">02</div><h3>Design</h3><p>Data model, mappings and integration architecture.</p></div>
+    <div class="workflow-step"><div class="n">03</div><h3>Build</h3><p>Transformations, pipelines and automation.</p></div>
+    <div class="workflow-step"><div class="n">04</div><h3>Validate</h3><p>Source-to-target, SIT, regression and UAT.</p></div>
+    <div class="workflow-step"><div class="n">05</div><h3>Optimize</h3><p>SQL and workflow performance tuning.</p></div>
+    <div class="workflow-step"><div class="n">06</div><h3>Deploy</h3><p>CI/CD and production delivery.</p></div>
+  </div>
+</section>
+
+<section class="section explore reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">04E / Currently Exploring</div>
+      <div><h2>Where I'm going next.</h2></div>
+    </div>
+    <p style="max-width:700px;color:#555;line-height:1.7;margin:0">Building toward the intersection of modern data engineering, legacy modernization and AI-assisted engineering.</p>
+    <div class="explore-row">
+      <span class="explore-tag">GenAI × Data Engineering</span>
+      <span class="explore-tag">Legacy Modernization</span>
+      <span class="explore-tag">Cloud Data Integration</span>
+      <span class="explore-tag">ETL Automation</span>
+      <span class="explore-tag">AI-assisted Testing</span>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap reveal">
+  <div class="section-head">
+    <div class="kicker">04F / Learning → Building → Applying</div>
+    <div><h2>Learning becomes useful when it ships.</h2></div>
+  </div>
+  <div class="learn-grid">
+    <div class="learn-card"><div class="kicker">Python</div><h3>Learn</h3><div class="arrow">↓</div><p>Programming and data-science foundations developed through coursework and certifications.</p><h3>Build</h3><div class="arrow">↓</div><p>Applied to automation, data workflows and engineering experiments.</p></div>
+    <div class="learn-card"><div class="kicker">SQL &amp; Data</div><h3>Learn</h3><div class="arrow">↓</div><p>Database design, relational data and data-science foundations.</p><h3>Build</h3><div class="arrow">↓</div><p>Applied to ETL development, validation and performance optimization.</p></div>
+    <div class="learn-card"><div class="kicker">AI</div><h3>Learn</h3><div class="arrow">↓</div><p>Azure AI Fundamentals and ongoing exploration of AI-assisted engineering.</p><h3>Apply</h3><div class="arrow">↓</div><p>Explored through innovation builds such as ClaimBridge, Strata, SchemaCodex and TrueBench.</p></div>
+  </div>
+</section>
+
+<section class="section wrap reveal">
+  <div class="section-head">
+    <div class="kicker">05 / Academic &amp; Internship Projects</div>
+    <div><h2>University Analytics System</h2></div>
+  </div>
+  <div class="academic-grid">
+    <div class="academic-card">
+      <div class="kicker">Data Integration</div>
+      <h3>Schema design &amp; implementation</h3>
+      <p>Led development activities for the University Analytics System, where I was responsible for designing and implementing data schemas using Informatica PowerCenter.</p>
+    </div>
+    <div class="academic-card">
+      <div class="kicker">Governance</div>
+      <h3>Reliable delivery</h3>
+      <p>Ensured robust data governance and timely deliverables to meet data integration and reporting requirements.</p>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="section wrap reveal">
+  <div class="section-head">
+    <div class="kicker">06 / Education &amp; Certifications</div>
+    <div><h2>Engineering foundation.<br>Continuous learning.</h2></div>
+  </div>
+  <div class="education">
+    <div class="edu-main">
+      <div class="kicker">Education</div>
+      <div class="degree">B.Tech in Instrumentation and Control Engineering</div>
+      <p><strong>Saranathan College of Engineering, Tiruchirapalli</strong><br>2022 · Graduated with a percentage of 85.3%.</p>
+    </div>
+    <div class="cert">
+      <div class="kicker">Featured Certification</div>
+      <h3 style="margin-top:14px">Microsoft Certified:<br>Azure AI Fundamentals</h3>
+      <p>AI-900</p>
+      <details style="margin-top:18px">
+        <summary style="cursor:pointer;font-size:12px;font-weight:700">View additional learning</summary>
+        <ul>
+          <li>Relational Database Design</li>
+          <li>Python 101 for Data Science</li>
+          <li>Data Structures — Python</li>
+          <li>Introduction to R Programming</li>
+          <li>Introduction to Data Science in Python</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section wrap reveal">
+  <div class="toolkit">
+    <div class="toolkit-card"><div class="kicker">Data Integration</div><h3>PowerCenter · IICS · Pentaho · ODI</h3><p>Tools used to build and modernize enterprise ETL pipelines.</p></div>
+    <div class="toolkit-card"><div class="kicker">Databases</div><h3>Oracle · PostgreSQL · SQL Server · Teradata</h3><p>Database platforms used for development, validation and tuning.</p></div>
+    <div class="toolkit-card"><div class="kicker">Engineering</div><h3>SQL · Python · Unix · Java</h3><p>Core technical skills used across development and automation tasks.</p></div>
+    <div class="toolkit-card"><div class="kicker">Delivery</div><h3>Azure DevOps · Git · CI/CD</h3><p>Release and deployment discipline supporting production delivery.</p></div>
+  </div>
+  <div class="skill-wrap">
+    <div>
+      <div class="kicker">07 / Technical Skillset</div>
+      <h2 style="margin-top:18px">The stack behind the work.</h2>
+      <p class="skill-intro">ETL Development &amp; Testing, Data Integration &amp; Migration, enterprise data integration, dimensional modeling and data warehousing.</p>
+    </div>
+    <div class="skills">
+      <span class="skill">ETL Development &amp; Testing</span><span class="skill">Data Integration &amp; Migration</span>
+      <span class="skill">Informatica IICS</span><span class="skill">Informatica PowerCenter</span>
+      <span class="skill">Pentaho Data Integration (PDI)</span><span class="skill">Talend</span>
+      <span class="skill">SQL</span><span class="skill">Oracle SQL</span><span class="skill">PostgreSQL</span>
+      <span class="skill">Dimensional Modeling</span><span class="skill">RDBMS</span>
+      <span class="skill">Data Warehousing (SCD Type 1/2)</span><span class="skill">Azure DevOps</span><span class="skill">Git</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact reveal">
+  <div class="wrap contact-grid">
+    <div><div class="kicker" style="color:#aaa">08 / Contact</div><h2>Let's build better data systems.</h2></div>
+    <div>
+      <p>For opportunities, collaboration or technical discussions, get in touch.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:9px">
+        <a class="btn" style="background:var(--lime);color:#111" href="mailto:thangarajhariharan75@gmail.com">Email</a>
+        <a class="btn" style="background:#fff;color:#111" href="tel:+919566853015">Call</a>
+        <a class="btn" style="border:1px solid #555" href="https://www.linkedin.com/in/hariharan-t-1896a4182/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap footer">
+  <span>© Hariharan T</span>
+  <span>Data Integration Specialist &amp; ETL Developer · Kochi</span>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
